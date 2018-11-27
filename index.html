@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+</head>
+<body>
+
+
+<header>
+    <div class="container">
+        <div class="header_inner">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="location">
+                <span class="icon-house"></span>
+                <p>Брест</p>
+                <span class="icon-arrow-down"></span>
+            </div>
+            <div class="nav_menu">
+                <div><a href="index.html">Главная</a></div>
+                <div><a href="about.html">О нас</a></div>
+                <div><a href="fransh.html">Франшиза</a></div>
+                <div><a href="corp.html">Твой корпоратив</a></div>
+                <div><a href="contacts.htm">Контакты</a></div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="banner">
+    <img src="images/banner.png" alt="">
+</div>
+<div class="change_region">
+    <h2>выбор города</h2>
+    <div id="map" class="map">
+    </div>
+
+
+</div>
+<div class="article_images">
+    <div class="article_item">
+        <img src="images/1.png" alt="">
+        <div class="effect_hover">
+            <div class="effect"></div>
+            <p>Мы создали живой, веселый,<br>общедоступный проект, который стал не<br>просто очередным квизом города!
+            </p>
+        </div>
+    </div>
+    <div class="article_item">
+        <img src="images/2.png" alt="">
+        <div class="effect_hover">
+            <div class="effect"></div>
+            <p>Шоу Квиз IQra - это формат квиза из 7<br>
+                острых, приправленных, самых<br>
+                разнообразных туров. Собирай команду<br>
+                и приходи за своей порцией позитива!</p>
+        </div>
+    </div>
+    <div class="article_item">
+        <img src="images/3.png" alt="">
+        <div class="effect_hover">
+            <div class="effect"></div>
+            <p>Шоу Квиз IQra - это полноценный отдых<br>
+                длиной в 2- 2.5 часа с качественным<br>
+                игровым контентом, пакетом отличных<br>
+                развлечений и набором достойных<br>
+                призов, сувениров от организаторов<br>
+                и партнеров игры</p></div>
+    </div>
+    <div class="article_item">
+        <img src="images/4.png" alt="">
+        <div class="effect_hover">
+            <div class="effect"></div>
+            <p>Шоу Квиз IQra - вам понравится!</p>
+        </div>
+    </div>
+</div>
+<div class="other_countries">
+    <div class="container">
+        <div class="other_countries_wrapper">
+            <div class="other_countries_title"><h2>хочешь посмотреть икру в другом городе?</h2></div>
+            <div class="other_countries_list">
+                <a href="#">брест</a>
+                <a href="#">барановичи</a>
+                <a href="#">москва</a>
+                <a href="#">зеленоград</a>
+            </div>
+            <div class="want_iqra_button">
+                <button>
+                    <span class="icon-checkmark"></span>
+                    <p>хочу икру в своем городе</p>
+
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="footer_inner">
+            <div class="logo_footer">
+                <img src="images/logo_footer.png" alt="">
+            </div>
+            <div class="footer_countries">
+                <a href="#">Брест</a>
+                <a href="#">Барановичи</a>
+                <a href="#">Москва</a>
+                <a href="#">Зеленоград</a>
+            </div>
+            <div class="footer_contacts">
+                <a href="tel:+375293333333">+375-33-333-333 рб</a>
+                <a href="tel:+375293333333">+7-999-999-99-99 рф</a>
+                <a href="mailto:info@igra.by">info@igra.by</a>
+            </div>
+            <div class="footer_socials">
+                <span class="icon-telegram-1"></span>
+                <span class="icon-viber-1"></span>
+                <span class="icon-whatsapp-logo-variant"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFxeIgVHP_kp9PXbIN9cCqFRZ63lks24U&callback=initMap"
+        defer></script>
+<script type="text/javascript">
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 6,
+            center: new google.maps.LatLng(55.1896363, 30.2748985),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+        });
+
+        var brest = {lat: 52.0873776, lng: 23.6377467};
+        var bar = {lat: 52.9159423, lng: 25.2228568};
+        var moskow = {lat: 55.902707, lng: 37.614874};
+        var tver = {lat: 56.914908, lng: 35.913904};
+        var positions = [brest, bar, moskow, tver]
+        for (var i = 0; i < positions.length; i++) {
+            var marker = new google.maps.Marker({
+                position: positions[i],
+                map: map,
+                icon: {
+                    url: "images/logo.png",
+                    scaledSize: new google.maps.Size(48, 48)
+                }
+            });
+        }
+        var i;
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+            });
+
+            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+
+        }
+    }
+</script>
+<script src="js/script.js"></script>
+</html>
