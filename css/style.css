@@ -22,10 +22,12 @@ h4 {
 .icon-house {
     font-size: 25px;
 }
-button{
-    border:none;
+
+button {
+    border: none;
     background-color: transparent;
 }
+
 .link > a {
     display: block;
     position: absolute;
@@ -68,6 +70,8 @@ ul {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    background-color: #fff;
+
 }
 
 .header_inner .logo img {
@@ -79,20 +83,106 @@ ul {
     margin-top: 7px;
 }
 
+
 .nav_menu {
     display: flex;
     justify-content: space-between;
     flex: 3;
 }
 
-header .location {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
+.nav_menu_item {
+    padding: 3px 5px;
 }
 
-header .location p {
+.nav_menu_item a:hover {
+    border-bottom: 2px solid #000000;
+}
+
+header .location {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.location_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.location_wrapper:focus{
+    outline: none;
+}
+.location_inner{
+    display: flex;
+    align-items: center;
+}
+.country_guess {
+    position: absolute;
+    padding: 23px;
+    background-color: #ffffff;
+    flex-direction: column;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    transform: translate(-50%);
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    -webkit-box-shadow: 0px 0px 63px -1px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: 0px 0px 63px -1px rgba(0, 0, 0, 0.78);
+    box-shadow: 0px 0px 63px -1px rgba(0, 0, 0, 0.78);
+    display: none;
+}
+
+.country_guess.active {
+    display: flex;
+}
+.location .icon-arrow-down {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.location .icon-arrow-down.active{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.country_guess .yes_no {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px -20px 0 -20px;
+}
+
+.country_guess p {
+    white-space: nowrap;
+}
+
+.country_guess .yes_no a {
+    margin: 0 20px;
+}
+
+.country_guess .yes_no a:hover {
+    border-bottom: 2px solid #000000;
+}
+
+header .location .location_changed {
     padding: 0 7px 0 10px;
 }
 
@@ -100,15 +190,116 @@ header .location p {
 .banner img {
     width: 100%;
     display: block;
+    position: relative;
+    z-index: -2;
 }
 
 /* change region */
+.change_region_trigger_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.change_region:hover {
+    background-color: #867DD1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.change_region_trigger{
+    cursor: pointer;
+}
+.change_region {
+    position: relative;
+}
+
 .change_region h2 {
     text-align: center;
     padding: 30px 0;
     font-size: 36px;
 }
 
+.change_region_modal {
+    -webkit-box-shadow: 0px 0px 63px -1px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: 0px 0px 63px -1px rgba(0, 0, 0, 0.78);
+    box-shadow: 0px 0px 63px -1px rgba(0, 0, 0, 0.78);
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: -16%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 20px 60px 50px 60px;
+    background-color: #ff0000;
+    display: none;
+}
+
+.change_region_modal.active {
+    display: flex;
+    z-index: 2;
+    animation: animateBoxesFromTopToBottom 0.9s backwards;
+}
+
+@keyframes animateBoxesFromTopToBottom {
+    0% {
+        transform: rotateX(90deg) translateY(-150%) translateX(-50%);
+        opacity: 0;
+
+    }
+    100% {
+        transform: rotateX(0deg) translateY(0%) translateX(-50%);
+        opacity: 1;
+    }
+}
+
+.change_region_modal h2 {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.change_region_modal .want_iqra_button {
+    margin-top: 34px;
+}
+
+.change_region_list_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.change_region_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.change_region_list a {
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.change_region_list a:hover{
+    -webkit-transform: translate(5px);
+    -moz-transform: translate(5px);
+    -ms-transform: translate(5px);
+    -o-transform: translate(5px);
+    transform: translate(5px);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
 .change_region .map {
     border-top: 1px solid #a7a7a7;
     border-bottom: 1px solid #a7a7a7;
@@ -121,6 +312,11 @@ header .location p {
     background: linear-gradient(to right, rgba(228, 226, 245, 1) 0%, rgba(255, 255, 255, 0.65) 35%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e2f5', endColorstr='#00ffffff', GradientType=1); /* IE6-9 */
     padding-bottom: 58px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .map {
@@ -135,9 +331,13 @@ header .location p {
     height: 550px;
     width: 100%;
     max-width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     position: relative;
     align-items: flex-start;
+}
+
+.article_images .article_item:nth-child(4) {
+    justify-content: center;
 }
 
 .article_images {
@@ -183,12 +383,14 @@ header .location p {
     clip-path: polygon(100% 0%, 0% 0%, 18% 100%, 82% 100%);
     z-index: 2;
     margin-left: -6%;
+    margin-right: -3%;
 }
 
 .article_images .article_item:nth-child(3) {
     clip-path: polygon(82% 0%, 18% 0%, 0% 100%, 100% 100%);
     z-index: 2;
-    margin-left: -6%;
+    margin-left: -3%;
+    margin-right: -6%;
 }
 
 .article_images .article_item:nth-child(4) {
@@ -299,14 +501,30 @@ header .location p {
 }
 
 .article_item:nth-child(4) p {
+    bottom: 120px;
+    left: 50%;
+    -webkit-transform: translate(-30%);
+    -moz-transform: translate(-30%);
+    -ms-transform: translate(-30%);
+    -o-transform: translate(-30%);
+    transform: translate(-30%)
+}
+
+.article_item:nth-child(4) .want_iqra_button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    z-index: 3;
+    width: 100%;
     bottom: 55px;
     left: 50%;
-    -webkit-transform: translate(-39%);
-    -moz-transform: translate(-39%);
-    -ms-transform: translate(-39%);
-    -o-transform: translate(-39%);
-    transform: translate(-39%)
+    -webkit-transform: translate(-30%);
+    -moz-transform: translate(-30%);
+    -ms-transform: translate(-30%);
+    -o-transform: translate(-30%);
+    transform: translate(-30%);
 }
+
 
 /* фотки под картой(конец) */
 
@@ -329,14 +547,17 @@ header .location p {
     z-index: 3;
     overflow: hidden;
 }
-.other_countries_list{
+
+.other_countries_list {
     display: flex;
 }
-.other_countries_title h2{
+
+.other_countries_title h2 {
     font-size: 36px;
     line-height: 1em;
 }
-.other_countries_list a{
+
+.other_countries_list a {
     color: #fd0004;
     font-size: 30px;
     padding: 10px 20px;
@@ -348,7 +569,8 @@ header .location p {
     transition: all 0.3s;
     cursor: pointer;
 }
-.other_countries_list a:hover{
+
+.other_countries_list a:hover {
     background-color: #fd0004;
     color: #ffffff;
     -webkit-transition: all 0.3s;
@@ -357,16 +579,18 @@ header .location p {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-.want_iqra_button button p{
+
+.want_iqra_button button span {
     padding-left: 10px;
 }
-.want_iqra_button button{
+
+.want_iqra_button button {
     display: flex;
     background-color: #ffd200;
     padding: 8px 12px;
     font-size: 18px;
     align-items: center;
-    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
     animation: pulse 2s infinite;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -374,6 +598,7 @@ header .location p {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+
 .want_iqra_button button:hover {
     -webkit-transform: scale(1.02, 1.02);
     -moz-transform: scale(1.02, 1.02);
@@ -390,36 +615,49 @@ header .location p {
 
 @keyframes pulse {
     0% {
-        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-        box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
     }
     70% {
-        -moz-box-shadow: 0 0 0 20px rgba(204,169,44, 0);
-        box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+        -moz-box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
     }
     100% {
-        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
     }
 }
 
-.other_countries{
+.other_countries {
     min-height: 260px;
     position: relative;
     overflow: hidden;
 }
 
-.other_countries:after{
-    display: block;
-    content: '';
-    height: 5000px;
+.other_countries .background {
+    height: 100%;
     top: 0;
     width: 100%;
-    background: url(../images/hat.png) 0 120% repeat ;
+    background: url(../images/hat.png) repeat;
+    background-position: 0 0px;
     position: absolute;
-    animation: back 350s infinite linear;
     opacity: 0.3;
 }
+
+.other_countries .background:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1); /* IE6-9 */
+}
+
 @keyframes back {
     0% {
         transform: translateY(-1%);
@@ -429,13 +667,13 @@ header .location p {
     }
 }
 
-.other_countries:before{
+.other_countries:before {
     display: block;
     content: '';
     height: 200px;
     z-index: 1;
     width: 225px;
-    background: url(../images/logo2.png)  ;
+    background: url(../images/logo2.png);
     position: absolute;
     top: 50%;
     left: -50%;
@@ -445,44 +683,83 @@ header .location p {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.other_countries.logo_effect:before{
+
+.other_countries.logo_effect:before {
     left: 15%;
     transition-timing-function: cubic-bezier(.33, 1.69, .73, .96);
     -webkit-transition: all 1.3s;
     -moz-transition: all 1.3s;
-    -ms-transition: all1.3s;
+    -ms-transition: all1 .3s;
     -o-transition: all 1.3s;
     transition: all 1.3s;
 }
-            /* footer */
+
+/* footer */
 .footer_inner {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 34px 0;
 }
-footer{
+
+footer {
     background-color: #0a091d;
 }
-.footer_countries,.footer_contacts{
+
+.footer_countries, .footer_contacts {
     display: flex;
     flex-direction: column;
     margin: -10px 0;
 }
 
-.footer_countries a{
+.footer_countries{
+    min-width: 100px;
+}
+.footer_countries a {
     color: #ffffff;
     padding: 10px 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
-.footer_contacts a{
+.footer_countries a:hover{
+    padding-left: 5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.footer_contacts a {
     color: #ffffff;
     padding: 10px 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
-.footer_socials span{
+
+.footer_socials a {
     font-size: 25px;
     color: #5a596a;
     padding: 0 5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
-.footer_socials{
+.footer_socials a:hover{
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.footer_socials {
     margin: 0 -5px;
 }

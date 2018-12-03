@@ -17,16 +17,28 @@
                 <img src="images/logo.png" alt="">
             </div>
             <div class="location">
-                <span class="icon-house"></span>
-                <p>Брест</p>
-                <span class="icon-arrow-down"></span>
+                <div class="location_wrapper">
+                    <div class="location_inner"">
+                        <span class="icon-house"></span>
+                        <p class="location_changed">Брест</p>
+                        <span class="icon-arrow-down"></span></div>
+                </div>
+                <div class="country_guess">
+                    <p>твой город брест?</p>
+                    <div class="yes_no">
+                        <div class="county_yes">
+                            <a href="">Да</a></div>
+                        <div class="county_no">
+                            <a href="">Нет</a></div>
+                    </div>
+                </div>
             </div>
             <div class="nav_menu">
-                <div><a href="index.html">Главная</a></div>
-                <div><a href="about.html">О нас</a></div>
-                <div><a href="fransh.html">Франшиза</a></div>
-                <div><a href="corp.html">Твой корпоратив</a></div>
-                <div><a href="contacts.htm">Контакты</a></div>
+                <div class="nav_menu_item"><a href="index.html">Главная</a></div>
+                <div class="nav_menu_item"><a href="about.html">О нас</a></div>
+                <div class="nav_menu_item"><a href="fransh.html">Франшиза</a></div>
+                <div class="nav_menu_item"><a href="corp.html">Твой корпоратив</a></div>
+                <div class="nav_menu_item"><a href="contacts.htm">Контакты</a></div>
             </div>
         </div>
     </div>
@@ -35,11 +47,26 @@
     <img src="images/banner.png" alt="">
 </div>
 <div class="change_region">
-    <h2>выбор города</h2>
+    <div class="change_region_trigger_wrapper"><h2 class="change_region_trigger">выбор города</h2></div>
+    <div class="change_region_modal">
+        <h2>выбери город</h2>
+        <div class="change_region_list_wrapper">
+            <div class="change_region_list">
+                <a>- Москва</a>
+                <a>- Зеленоград</a>
+                <a>- Брест</a>
+                <a>- Барановичи</a>
+            </div>
+        </div>
+        <div class="want_iqra_button">
+            <button>
+                <span class="icon-checkmark"></span>
+                <span>хочу икру в своем городе</span>
+            </button>
+        </div>
+    </div>
     <div id="map" class="map">
     </div>
-
-
 </div>
 <div class="article_images">
     <div class="article_item">
@@ -75,7 +102,15 @@
         <img src="images/4.png" alt="">
         <div class="effect_hover">
             <div class="effect"></div>
-            <p>Шоу Квиз IQra - вам понравится!</p>
+
+            <p class="last_block_text">Шоу Квиз IQra - вам понравится!</p>
+            <div class="want_iqra_button">
+                <button>
+                    <span class="icon-checkmark"></span>
+                    <span>хочу икру в своем городе</span>
+                </button>
+            </div>
+
         </div>
     </div>
 </div>
@@ -92,12 +127,12 @@
             <div class="want_iqra_button">
                 <button>
                     <span class="icon-checkmark"></span>
-                    <p>хочу икру в своем городе</p>
-
+                    <span>хочу икру в своем городе</span>
                 </button>
             </div>
         </div>
     </div>
+    <div class="background"></div>
 </div>
 <footer>
     <div class="container">
@@ -117,9 +152,9 @@
                 <a href="mailto:info@igra.by">info@igra.by</a>
             </div>
             <div class="footer_socials">
-                <span class="icon-telegram-1"></span>
-                <span class="icon-viber-1"></span>
-                <span class="icon-whatsapp-logo-variant"></span>
+                <a class="icon-telegram-1"></a>
+                <a class="icon-viber-1"></a>
+                <a class="icon-whatsapp-logo-variant"></a>
             </div>
         </div>
     </div>
