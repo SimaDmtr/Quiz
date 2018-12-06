@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?veqzj0');
-  src:  url('fonts/icomoon.eot?veqzj0#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?veqzj0') format('truetype'),
-    url('fonts/icomoon.woff?veqzj0') format('woff'),
-    url('fonts/icomoon.svg?veqzj0#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?giszk');
+  src:  url('fonts/icomoon.eot?giszk#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?giszk') format('truetype'),
+    url('fonts/icomoon.woff?giszk') format('woff'),
+    url('fonts/icomoon.svg?giszk#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-coin-of-dollar:before {
+  content: "\e909";
+}
+.icon-lightbulb:before {
+  content: "\e906";
+}
+.icon-money:before {
+  content: "\e907";
+}
+.icon-calendar:before {
+  content: "\e908";
+}
 .icon-telegram-1:before {
   content: "\e903";
 }
