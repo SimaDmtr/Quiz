@@ -1,4 +1,9 @@
-new WOW().init();
+wow = new WOW(
+    {
+        offset:       100,          // default
+    }
+)
+wow.init();
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 6,
