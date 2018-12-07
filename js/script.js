@@ -1,9 +1,10 @@
 wow = new WOW(
     {
-        offset:       100,          // default
+        offset: 100,          // default
     }
 )
 wow.init();
+
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 6,
@@ -43,6 +44,7 @@ function initMap() {
 
     }
 }
+
 $('.change_region_trigger').click(function () {
     $('.change_region_modal').addClass('active')
 })
@@ -50,7 +52,7 @@ $(".location").hover(function () {
     if ($('.country_guess').hasClass("active")) {
         $('.country_guess').fadeOut().removeClass("active");
         $('.location .icon-arrow-down').removeClass("active");
-    } else  {
+    } else {
         $('.country_guess').fadeIn().addClass("active");
         $('.location .icon-arrow-down').addClass("active");
     }
@@ -61,21 +63,24 @@ $(document).mouseup(function (e) {
         container.removeClass('active');
     }
 });
-            //табы франшизы
+//табы франшизы
 $(".franch_tabs_content").not(":first").hide(300)
 $(".franch_tabs_content:first").addClass("active");
 $(".franch_tabs_nav_item").click(function () {
     $(".franch_tabs_nav_item").eq($(this).index()).addClass("active");
     $(".franch_tabs_content").hide().eq($(this).index()).fadeIn().addClass('active').siblings().removeClass('active');
-    $(this).siblings().removeClass('active  ')}).eq(0).addClass("active");
+    $(this).siblings().removeClass('active  ')
+}).eq(0).addClass("active");
 
 
-                //движение фона
+//движение фона
 var k = 0;
 var slow_rate = 14;
+
 function back() {
     k--;
     $('.background').css('backgroundPosition-y', k / slow_rate);
 }
+
 setInterval(back, 10)
 
