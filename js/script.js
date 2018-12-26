@@ -44,7 +44,7 @@ function initMap() {
 
     }
 }
-
+$('.fotorama__img').click()
 $('.change_region_trigger').click(function () {
     $('.change_region_modal').addClass('active')
 })
@@ -79,8 +79,29 @@ var slow_rate = 14;
 
 function back() {
     k--;
-    $('.background').css('backgroundPosition-y', k / slow_rate);
+    $('.background:not(.black)').css('backgroundPosition-y', k / slow_rate);
 }
 
 setInterval(back, 10)
 
+var n = 0;
+var slow_rate_top = 14;
+
+function up() {
+    n++;
+    $('.black').css('backgroundPosition-y', n / slow_rate_top);
+}
+
+setInterval(up, 10)
+
+
+$( ".peace" ).hover(function() {
+   $('.hover_hell').fadeIn();
+    $('.hover_peace').fadeOut();
+    $('.flip_effect_horizontal').removeClass('active')
+});
+$( ".hell" ).hover(function() {
+    $('.hover_peace').fadeIn();
+    $('.hover_hell').fadeOut();
+    $('.flip_effect_horizontal').addClass('active')
+});

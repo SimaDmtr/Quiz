@@ -687,6 +687,21 @@ header .location .location_changed {
     position: absolute;
     opacity: 0.3;
 }
+.peace .background{
+    opacity: 0.15;
+}
+.background.black {
+    background: url(../images/back_black.png) 100% repeat;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    background-size: cover;
+
+
+}
+.background.black:after {
+    display: none;
+}
 
 .background:after {
     content: "";
@@ -1587,4 +1602,135 @@ footer {
     -webkit-box-shadow: 7px -5px 31px -3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 7px -5px 31px -3px rgba(0, 0, 0, 0.75);
     box-shadow: 7px -5px 31px -3px rgba(0, 0, 0, 0.75);
+}
+
+
+
+.hell_peace_wrapper{
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+}
+.hell{
+    height: 100vh;
+    margin-left: -50%;
+    width: 100vw;
+    -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%, 65% 100%);
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 65% 100%);
+
+}
+.peace{
+    height: 100vh;
+    width: 100vw;
+    -webkit-clip-path: polygon(0 0, 35% 0, 65% 100%, 0% 100%);
+    clip-path: polygon(0 0, 35% 0, 65% 100%, 0% 100%);
+    margin-right: -50%;
+    position: relative;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f8f8f8+0,1c9edb+24,123342+100 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 0%, rgba(28,158,219,1) 24%, rgba(18,51,66,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(248,248,248,1) 0%,rgba(28,158,219,1) 24%,rgba(18,51,66,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(248,248,248,1) 0%,rgba(28,158,219,1) 24%,rgba(18,51,66,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#123342',GradientType=1 ); /* IE6-9 */}
+
+.cloud{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+.cloud img{
+    display: block;
+}
+.peace .cloud_img{
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-69%);
+}
+.hell .cloud_img{
+    position: absolute;
+    top: -3%;
+    z-index: 2;
+    left: 27%;
+}
+.peace_logo{
+    position: absolute;
+    bottom: 17%;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hell_logo{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 24%;
+    top: 7%;
+}
+.hell_peace_wrapper h2{
+    transform: rotate(-15deg) skew(-17deg);
+    font-size: 30px;
+    line-height: 50px;
+    position: relative;
+    left: 38px;
+    top: -20px;
+}
+
+.flip_effect_horizontal {
+
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    z-index: 9999;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    align-items: center;
+    transition:1s;
+    transform-style: preserve-3d;
+}
+
+.flip_effect_horizontal.active {
+    transform: rotateY(180deg);
+}
+
+.flip_effect_horizontal .front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip_effect_horizontal .back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.flip_effect_horizontal img{
+    width: 200px;
+}
+.hover_peace{
+    width: 100%;
+    height: 100%;
+    background-color: #0c5c83;
+    position: relative;
+    opacity: 0.4;
+    z-index: 5;
+    display: none;
+}
+.hover_hell{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: #222222;
+    position: relative;
+    z-index: 5;
+    display: none;
 }
