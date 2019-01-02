@@ -1734,3 +1734,103 @@ footer {
     z-index: 5;
     display: none;
 }
+
+
+
+/* Корпоратив */
+.corporative{
+    background: url(../big_hat_back.png) top center no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.corporative .flip_effect_horizontal{
+    position: unset;
+    -webkit-animation: rotate 3s infinite ease-in-out;
+    -o-animation: rotate 3s infinite ease-in-out;
+    animation: rotate 3s infinite ease-in-out;
+    padding-top: 50px;
+}
+.corporative .flip_effect_horizontal .front{
+    position: relative;
+}
+@keyframes rotate {
+    0%   {transform: rotateY(0deg);}
+    50% {transform: rotateY(180deg);}
+    100% {transform: rotateY(0deg);}
+}
+.corporative .flip_effect_horizontal img{
+    width: 160px;
+}
+.corporative_headline p{
+    font-size: 24px;
+    color: #1c1c1c;
+    text-align: center;
+    padding: 20px;
+}
+.red{
+    color: #e5342a;
+    font-size: 30px;
+}
+.orange{
+    color: #f1901f;
+    font-size: 30px;
+}
+.headline_for{
+    margin-top: 40px;
+    font-size: 32px;
+    color: #151515;
+    font-weight: 700;
+}
+.blue_orange_corp{
+    height: 375px;
+    width: 100%;
+    display: flex;
+    margin-top: -60px;
+}
+.blue_orange_corp_left{
+    width: 100%;
+    position: relative;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0e50ba+8,36abd2+50,e0e8eb+100 */
+    background: rgb(14,80,186); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(14,80,186,1) 8%, rgba(54,171,210,1) 50%, rgba(224,232,235,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(14,80,186,1) 8%,rgba(54,171,210,1) 50%,rgba(224,232,235,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(14,80,186,1) 8%,rgba(54,171,210,1) 50%,rgba(224,232,235,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e50ba', endColorstr='#e0e8eb',GradientType=1 ); /* IE6-9 */
+    -webkit-clip-path: polygon(0 5%, 50% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 5%, 50% 0, 100% 100%, 0% 100%);
+    margin-right: -5%;
+    z-index: 1;
+    -webkit-animation: blue_orange_corp_left 3s infinite linear;
+    -o-animation: blue_orange_corp_left 3s infinite linear;
+    animation: blue_orange_corp_left 3s infinite linear;
+}
+
+.blue_orange_corp_right{
+    width: 100%;
+    position: relative;
+    -webkit-clip-path: polygon(54% 14%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(54% 14%, 100% 0, 100% 100%, 0% 100%);
+    margin-left: -5%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f1901f+0,f4d69d+46,f59507+100 */
+    background: rgb(241,144,31); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(241,144,31,1) 0%, rgba(244,214,157,1) 46%, rgba(245,149,7,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(241,144,31,1) 0%,rgba(244,214,157,1) 46%,rgba(245,149,7,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(241,144,31,1) 0%,rgba(244,214,157,1) 46%,rgba(245,149,7,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1901f', endColorstr='#f59507',GradientType=1 ); /* IE6-9 */
+}
+@keyframes blue_orange_corp_left {
+    0%   {-webkit-clip-path: polygon(0 5%, 50% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 5%, 50% 0, 100% 100%, 0% 100%);}
+    20% {-webkit-clip-path: polygon(0 7%, 65% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 5%, 65% 0, 100% 100%, 0% 100%);}
+    50% {-webkit-clip-path: polygon(0 2%, 68% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 2%, 68% 0, 100% 100%, 0% 100%);}
+    60% {-webkit-clip-path: polygon(0 3%, 77% 10%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 3%, 77% 10%, 100% 100%, 0% 100%);}
+    80%{-webkit-clip-path: polygon(0 0, 94% 4%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 94% 4%, 100% 100%, 0% 100%);}
+    100%{-webkit-clip-path: polygon(0 5%, 50% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 5%, 50% 0, 100% 100%, 0% 100%);}
+}
