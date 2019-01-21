@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?giszk');
-  src:  url('fonts/icomoon.eot?giszk#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?giszk') format('truetype'),
-    url('fonts/icomoon.woff?giszk') format('woff'),
-    url('fonts/icomoon.svg?giszk#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?nfllwf');
+  src:  url('fonts/icomoon.eot?nfllwf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?nfllwf') format('truetype'),
+    url('fonts/icomoon.woff?nfllwf') format('woff'),
+    url('fonts/icomoon.svg?nfllwf#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,17 +24,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-coin-of-dollar:before {
-  content: "\e909";
+.icon-accept-circular-button-outline:before {
+  content: "\e90c";
 }
-.icon-lightbulb:before {
-  content: "\e906";
+.icon-verify-sign:before {
+  content: "\e90b";
 }
-.icon-money:before {
-  content: "\e907";
+.icon-left-arrow:before {
+  content: "\e90a";
 }
-.icon-calendar:before {
-  content: "\e908";
+.icon-house:before {
+  content: "\e900";
+}
+.icon-arrow-down:before {
+  content: "\e901";
+}
+.icon-checkmark:before {
+  content: "\e902";
 }
 .icon-telegram-1:before {
   content: "\e903";
@@ -45,12 +51,15 @@
 .icon-whatsapp-logo-variant:before {
   content: "\e905";
 }
-.icon-arrow-down:before {
-  content: "\e901";
+.icon-lightbulb:before {
+  content: "\e906";
 }
-.icon-house:before {
-  content: "\e900";
+.icon-money:before {
+  content: "\e907";
 }
-.icon-checkmark:before {
-  content: "\e902";
+.icon-calendar:before {
+  content: "\e908";
+}
+.icon-coin-of-dollar:before {
+  content: "\e909";
 }

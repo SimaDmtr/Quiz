@@ -9,3 +9,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ChemyRetro';
+    src: url('ChemyRetro.eot');
+    src: url('ChemyRetro.eot?#iefix') format('embedded-opentype'),
+        url('ChemyRetro.woff') format('woff'),
+        url('ChemyRetro.ttf') format('truetype'),
+        url('ChemyRetro.svg#ChemyRetro') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+

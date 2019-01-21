@@ -6,10 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="css/animate.min.css">
+    <?php wp_head(); ?>
 </head>
 <body>
 <div class="hell_peace_wrapper">
@@ -45,9 +42,7 @@
     </div>
 
 </div>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/script.js"></script>
+<?php wp_footer(); ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFxeIgVHP_kp9PXbIN9cCqFRZ63lks24U&callback=initMap"
         defer></script>
 </body>
