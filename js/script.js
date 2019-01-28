@@ -25,7 +25,6 @@ function initMap() {
 }
 
 
-
 (function ($) {
     wow = new WOW(
         {
@@ -33,7 +32,6 @@ function initMap() {
         }
     )
     wow.init();
-
 
 
     $('.fotorama__img').click()
@@ -110,7 +108,71 @@ function initMap() {
     $('.blue_orange_corp_right a').mouseleave(function () {
         $('.blue_orange_corp_right').css("transform", "unset");
     })
+    window.onscroll = function show_header() {
+        var header = document.querySelector('header');
+        if (window.pageYOffset > 70) {
+            header.classList.add('fixed')
+        }
+        else {
+            header.classList.remove('fixed')
+        }
+    }
+    $(".tab-content").not(":first").hide(300);
+    $(".ratings_content_upper_nav span").click(function () {
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+        $(".tab-content").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
 
 
+
+
+    $('.register_choose_item').click(function () {
+        if ($(this).hasClass("active")) {
+
+        } else {
+            if ($(this).hasClass('peace_choose')) {
+                $('.register_game .background,.register_game_inner p,.register_game_inner span,.custom-select-trigger').removeClass('black')
+            }
+            else{ $('.register_game .background,.register_game_inner p,.register_game_inner span,.custom-select-trigger').addClass('black')}
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+        }
+    })
+    $(".custom-select").each(function () {
+        var classes = $(this).attr("class"),
+            id = $(this).attr("id"),
+            name = $(this).attr("name");
+        var template = '<div class="' + classes + '">';
+        template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+        template += '<div class="custom-options">';
+        $(this).find("option").each(function () {
+            template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+        });
+        template += '</div></div>';
+
+        $(this).wrap('<div class="custom-select-wrapper"></div>');
+        $(this).hide();
+        $(this).after(template);
+    });
+    $(".custom-option:first-of-type").hover(function () {
+        $(this).parents(".custom-options").addClass("option-hover");
+    }, function () {
+        $(this).parents(".custom-options").removeClass("option-hover");
+    });
+    $(".custom-select-trigger").on("click", function () {
+        $('html').one('click', function () {
+            $(".custom-select").removeClass("opened");
+        });
+        $(this).parents(".custom-select").toggleClass("opened");
+        event.stopPropagation();
+    });
+    $(".custom-option").on("click", function () {
+        $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+        $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+        $(this).addClass("selection");
+        $(this).parents(".custom-select").removeClass("opened");
+        $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+    });
 }(jQuery));
 
