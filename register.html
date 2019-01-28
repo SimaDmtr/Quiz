@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body>
+<header class="header_site">
+    <div class="container">
+        <div class="header_inner">
+            <div class="logo link">
+                <a href="main.html"></a>
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="location">
+                <div class="location_wrapper">
+                    <div class="location_inner">
+                        <span class="icon-house"></span>
+                        <p class="location_changed">Брест</p>
+                        <span class="icon-arrow-down"></span></div>
+                </div>
+                <div class="country_guess">
+                    <p>твой город брест?</p>
+                    <div class="yes_no">
+                        <div class="county_yes">
+                            <a href="">Да</a></div>
+                        <div class="county_no">
+                            <a href="">Нет</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_menu">
+                <div class="nav_menu_item"><a href="main.html">Главная</a></div>
+                <div class="nav_menu_item"><a href="main.html#about">О нас</a></div>
+                <div class="nav_menu_item"><a href="franchise.html">Франшиза</a></div>
+                <div class="nav_menu_item"><a href="corporative.html">Твой корпоратив</a></div>
+                <div class="nav_menu_item"><a href="contacts.html">Контакты</a></div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="register">
+    <div class="register_choose container">
+        <h1>регистрация</h1>
+        <div class="register_choose_inputs">
+            <input class="register_choose_item active peace_choose" name="register_choose" type="radio" id="peace"
+                   checked required>
+            <label class="reg_peace_img  wow fadeInLeft" for="peace"><img src="images/svg/res2.svg" alt=""></label>
+            <input class="register_choose_item hell_choose" name="register_choose" id="hell" type="radio" required>
+            <label class="reg_hell_img wow fadeInRightCustom" for="hell"><img src="images/svg/res1.svg" alt=""></label>
+        </div>
+    </div>
+    <div class="register_game">
+        <div class="register_game_inner container">
+            <div class="register_game_selects">
+                <select name="sources" id="country" class="custom-select sources" placeholder="Выберите город">
+                    <option value="brest">Брест</option>
+                    <option value="baranovichi">Барановичи</option>
+                    <option value="moscow">Москва</option>
+                    <option value="zelenograd">Зеленоград</option>
+                </select>
+                <select name="sources" id="date" class="custom-select sources" placeholder="Выберите дату">
+                    <option value="brest">21 апреля</option>
+                    <option value="baranovichi">22 апреля</option>
+                    <option value="moscow">27 апреля</option>
+                    <option value="zelenograd">28 апреля</option>
+                </select>
+            </div>
+            <div class="register_game_middle">
+                <table>
+                    <tbody>
+                    <tr class="register_game_date">
+                        <td><p>11 апреля, среда</p></td>
+                        <td class="col2"><p>19:00</p></td>
+                    </tr>
+                    <tr class="register_game_place">
+                        <td><p>Кафе "буфет"</p></td>
+                        <td class="col2"><p>6 <span>byn</span></p></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="register_game_number wow slideInRight">
+                <p>#39</p>
+            </div>
+        </div>
+
+        <div class="background"></div>
+    </div>
+    <form class="register_form container">
+        <div class="register_form_area">
+            <div class="register_form_field">
+                <label for="command_name">
+                    Название команды<span>*</span>
+                </label>
+                <input type="text" id="command_name" placeholder="команда" required>
+            </div>
+            <div class="register_form_field">
+                <label for="players_count">количество человек в команде<span>*</span></label>
+                <input id="players_count" type="text" placeholder="количество" required>
+            </div>
+        </div>
+        <div class="register_form_area">
+            <div class="register_form_field">
+                <label for="email">e-mail</label>
+                <input id="email" type="email" placeholder="e-mail">
+            </div>
+            <div class="register_form_field">
+                <label for="tel" >телефон <span
+                        class="annotation">(для новых команд)</span></label>
+                <input id="tel" placeholder="телефон" type="tel">
+            </div>
+        </div>
+        <div class="register_form_under">
+            <p>поля, отмеченные звездочкой (<span>*</span>), обязательны для заполнения</p>
+        </div>
+        <button class="submit_reg" type="submit">
+            <span class="icon-checkmark"></span>
+            записаться на икру
+        </button>
+    </form>
+
+</section>
+<footer>
+    <div class="container">
+        <div class="footer_inner">
+            <div class="logo_footer link">
+                <a href="main.html"></a>
+                <img src="images/logo_footer.png" alt="">
+            </div>
+            <div class="footer_countries">
+                <a href="brest.html">Брест</a>
+                <a href="baranovichi.html">Барановичи</a>
+                <a href="moscow.html">Москва</a>
+                <a href="zelenograd.html">Зеленоград</a>
+            </div>
+            <div class="footer_contacts">
+                <a href="tel:+375293333333">+375-33-333-333 рб</a>
+                <a href="tel:+375293333333">+7-999-999-99-99 рф</a>
+                <a href="mailto:info@igra.by">info@igra.by</a>
+            </div>
+            <div class="footer_socials">
+                <a class="icon-telegram-1"></a>
+                <a class="icon-viber-1"></a>
+                <a class="icon-whatsapp-logo-variant"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmPLv9lcDKzFTO0kLiWFi47W6lwj0Pqgc&callback=initMap"
+        defer></script>
+<script src="js/script.js"></script>
+</body>
+</html>
