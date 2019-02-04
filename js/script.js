@@ -174,5 +174,10 @@ function initMap() {
         $(this).parents(".custom-select").removeClass("opened");
         $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
     });
+    $('.burger').click(function () {
+        $(this).toggleClass('open');
+        $('.nav_menu').toggleClass('active')
+        $('.nav_menu_item').toggleClass('active')
+    });
 }(jQuery));
 
